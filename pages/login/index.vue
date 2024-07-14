@@ -6,7 +6,7 @@ const redirectTo = `${useRuntimeConfig().public.baseUrl}/confirm`
 
 watchEffect(() => {
   if (user.value) {
-    navigateTo("/todo")
+    navigateTo("/")
   }
 })
 </script>
@@ -14,9 +14,9 @@ watchEffect(() => {
 <template>
   <div class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <h2 class="my-6 text-center text-3xl font-extrabold u-text-white">Sign in to your account</h2>
-    <div>
+    <div class="flex justify-center">
       <button
-        class="mt-3"
+        class="mt-3 btn btn-primary"
         @click="auth.signInWithOAuth({ provider: 'github', options: { redirectTo } })"
       >
         Sign in with Github

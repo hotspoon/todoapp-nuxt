@@ -5,7 +5,7 @@ watch(
   user,
   () => {
     if (user.value) {
-      return navigateTo("/todo")
+      return navigateTo("/")
     }
   },
   { immediate: true }
